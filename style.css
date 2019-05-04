@@ -6,14 +6,15 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
-body {
+body,
+.wrapper {
   overflow-x: hidden;
 }
 .site-header {
   display: flex;
   width: 60%;
   margin: 0 auto;
-  height: 15vh;
+  min-height: 15vh;
   margin-bottom: 20px;
 }
 .site-header .square {
@@ -164,7 +165,7 @@ body {
 .company {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  min-height: 60vh;
   background-color: #aaa;
 }
 .company-left {
@@ -217,7 +218,7 @@ body {
 .news-section {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  min-height: 60vh;
   position: relative;
 }
 .news-left,
@@ -281,12 +282,12 @@ body {
   background-color: #f00;
 }
 .services-section {
-  height: 60vh;
+  min-height: 60vh;
   position: relative;
   color: #fff;
 }
 .parralax {
-  height: 60vh;
+  min-height: 60vh;
   background-image: url("img/train3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -317,7 +318,7 @@ body {
 .realizations {
   display: flex;
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
   width: 160%;
   transform: translateX(-29%);
 }
@@ -375,7 +376,7 @@ body {
 .fleet-section {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  min-height: 60vh;
   position: relative;
 }
 .fleet-left,
@@ -424,7 +425,7 @@ body {
 .contact-section {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  min-height: 60vh;
   position: relative;
 }
 .contact-left,
@@ -434,7 +435,7 @@ body {
   color: #fff;
 }
 .contact-left {
-  height: 100%;
+  min-height: 60vh;
   background-color: #333;
   padding: 90px 50px;
   text-transform: uppercase;
@@ -469,7 +470,7 @@ body {
 
 .site-footer {
   display: flex;
-  height: 20vh;
+  min-height: 20vh;
   background-color: #24406d;
   padding-top: 20px;
 }
@@ -485,4 +486,156 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   width: 200px;
+}
+
+@media (max-width: 376px) {
+  .site-header {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+  }
+  .site-logo-container {
+    margin-right: 0;
+  }
+  .header-main .social {
+    justify-content: flex-start;
+  }
+  .site-logo-container .site-logo {
+    font-size: 30px;
+  }
+  .header-main .site-nav {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .header-main .site-nav .nav-item {
+    padding: 0 2px;
+  }
+  .carousel {
+    width: 300%;
+  }
+  .carousel-item {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  .carousel-description {
+    width: 100%;
+    padding: 40px 10px;
+  }
+  .carousel-description h1 {
+    font-size: 16px;
+  }
+  .carousel-description p {
+    line-height: 1.8;
+    font-size: 14px;
+  }
+  .company {
+    flex-direction: column;
+  }
+  .company-left {
+    width: 100%;
+  }
+  .company-movie {
+    width: 100%;
+  }
+  .company-header-item {
+    font-size: 10px;
+  }
+  .company-text {
+    font-size: 16px;
+  }
+  .news-section {
+    flex-direction: column;
+  }
+  .news-left,
+  .news-right {
+    width: 100%;
+  }
+  .news-left .text-container h2 {
+    font-size: 16px;
+  }
+  .news-left .text-container p {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+  .news-right h2 {
+    font-size: 18px;
+  }
+  .news-right .line {
+    margin: 15px 0;
+  }
+  .services-section .text-container h2 {
+    font-size: 18px;
+    padding: 20px 0;
+  }
+  .services-section .text-container {
+    width: 80%;
+  }
+  .services-section .text-container .line {
+    margin: 10px 0;
+  }
+  .services-section .text-container p.big {
+    font-size: 16px;
+  }
+  .realizations {
+    flex-direction: column-reverse;
+    width: 100%;
+    transform: translateX(0);
+  }
+  .realizations-item:nth-child(2) {
+    width: 100%;
+  }
+  .realizations-description {
+    width: 100%;
+  }
+  .realizations-description h1 {
+    font-size: 18px;
+  }
+  .realizations-description p {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  .fleet-section {
+    flex-direction: column;
+  }
+  .fleet-left,
+  .fleet-right {
+    width: 100%;
+  }
+  .fleet-right h2 {
+    font-size: 18px;
+  }
+  .fleet-right .line {
+    margin: 10px 0;
+  }
+  .fleet-right p {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+  .contact-left p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .contact-right h2 {
+    font-size: 18px;
+  }
+  .contact-right .line {
+    margin: 10px 0;
+  }
+  .contact-right p {
+    font-size: 14px;
+  }
+  .site-footer {
+    flex-direction: column;
+  }
+  .site-footer .footer-text {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }
